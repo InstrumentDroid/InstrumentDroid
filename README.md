@@ -1,20 +1,20 @@
-# DDroid-instrumentor
+# **[InstrumentDroid](https://github.com/InstrumentDroid/InstrumentDroid)**
 
 <font face='Times New Roman' size=4>
 
 ## Introduction
 
-DDroid-instrumentor is an automated instrumentation tool for Android apps. It is built on [ASM](https://asm.ow2.io/) and [Gradle Transformer](https://developer.android.com/reference/tools/gradle-api/7.0/com/android/build/api/transform/Transform) to automatically instrument apps at the event handlers to uniquely log executed UI events. Specifically, ASM is an all purpose Java bytecode manipulation and analysis framework, which can modify existing classes or dynamically generate classes in the binary form.
+InstrumentDriod is an automated instrumentation tool for Android apps. It is built on [ASM](https://asm.ow2.io/) and [Gradle Transformer](https://developer.android.com/reference/tools/gradle-api/7.0/com/android/build/api/transform/Transform) to automatically instrument apps at the event handlers to uniquely log executed UI events. Specifically, ASM is an all purpose Java bytecode manipulation and analysis framework, which can modify existing classes or dynamically generate classes in the binary form.
 
-In our work, DDroid-instrumentor is used to instrument the apps from [Themis](https://github.com/the-themis-benchmarks), a representative benchmark with diverse types of real-world bugs for Android.
+In our work, InstrumentDriod is used to instrument the apps from [Themis](https://github.com/the-themis-benchmarks), a representative benchmark with diverse types of real-world bugs for Android. We have settled six instrumented apks in the directory [Instrumented-application-apk](https://github.com/InstrumentDroid/InstrumentDroid/tree/main/Instrumented-application-apk "Instrumented-application-apk").
 
-Fig. 1 shows DDroid-instrumentor's workflow.
+Fig. 1 shows InstrumentDriod's workflow.
 
 ![Fig 1](https://github.com/InstrumentDroid/InstrumentDroid/blob/main/figure/Workflow%20of%20our%20instrumentation.png)
 
 ### Step (1): Instrumentation
 
-Given an app, we automatically instrument event handler  methods to obtain an instrumented app. Specifically, we get the ``.class`` files through Gradle Transformer and our custom Gradle plugin, and use ASM to traverse all the ``.class`` files. If the event handler method is traversed, our custom function will scan the parameter list of the current event handler method, and insert specific API-call statements into the current event handler method according to the type of the UI component bounded to the event handler to get __``UI-Infos``__ of the event handler method. For example, ``onClick (View v)`` is a typical event handler method, and the UI component type in its parameter list is __android.view.View__. Then we instrument at the beginning of the ``onClick`` method body to log the id, className and location of the View component, as well as the global qualified name of its corresponding event handler method.
+Given an app, we automatically instrument event handler methods to obtain an instrumented app. Specifically, we get the ``.class`` files through Gradle Transformer and our custom Gradle plugin, and use ASM to traverse all the ``.class`` files. If the event handler method is traversed, our custom function will scan the parameter list of the current event handler method, and insert specific API-call statements into the current event handler method according to the type of the UI component bounded to the event handler to get __``UI-Infos``__ of the event handler method. For example, ``onClick (View v)`` is a typical event handler method, and the UI component type in its parameter list is __android.view.View__. Then we instrument at the beginning of the ``onClick`` method body to log the id, className and location of the View component, as well as the global qualified name of its corresponding event handler method.
 
 ### Step (2): Retrigger bug and set up the ground truth of event-signature
 
@@ -30,9 +30,9 @@ the instrumented buggy app obtained in step 1 to get the Raw
 
 In this step, we analyze the Raw Logs obtained in step 3, and identify which pivot events were executed in step 3 based on the event-signature ground truth obtained in step 2.
 
-## Guide of using DDroid-instrumentor
+## Guide of using InstrumentDriod
 
-Specifically, DDroid-instrumentor requires the following steps to enable the app instrumentation.
+Specifically, InstrumentDriod requires the following steps to enable the app instrumentation.
 
 ### step 0. Preparation
 
