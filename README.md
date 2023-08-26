@@ -8,9 +8,9 @@ InstrumentDriod is an automated instrumentation tool for Android apps. It is bui
 
 In our work, InstrumentDriod is used to instrument the apps from [Themis](https://github.com/the-themis-benchmarks), a representative benchmark with diverse types of real-world bugs for Android. We have settled six instrumented apks in the directory [Instrumented-application-apks](https://github.com/InstrumentDroid/InstrumentDroid/tree/main/Instrumented-application-apks "Instrumented-application-apks").
 
-Fig. 1 shows InstrumentDriod's workflow.
+Figure below shows InstrumentDriod's workflow.
 
-![Fig 1](https://github.com/InstrumentDroid/InstrumentDroid/blob/main/figure/Workflow%20of%20our%20instrumentation.png)
+![Fig 1](https://github.com/InstrumentDroid/InstrumentDroid/blob/main/figure/Workflow%20of%20our%20instrumentation.png "Workflow of our instrumentation")
 
 ### Step (1): Instrumentation
 
