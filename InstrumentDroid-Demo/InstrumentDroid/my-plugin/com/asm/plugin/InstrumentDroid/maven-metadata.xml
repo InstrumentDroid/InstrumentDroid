@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.asm.plugin</groupId>
+  <artifactId>InstrumentDroid</artifactId>
+  <versioning>
+    <release>0.0.1</release>
+    <versions>
+      <version>0.0.1</version>
+    </versions>
+    <lastUpdated>20230826125857</lastUpdated>
+  </versioning>
+</metadata>
