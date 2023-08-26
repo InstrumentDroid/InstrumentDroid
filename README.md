@@ -6,7 +6,7 @@
 
 InstrumentDriod is an automated instrumentation tool for Android apps. It is built on [ASM](https://asm.ow2.io/) and [Gradle Transformer](https://developer.android.com/reference/tools/gradle-api/7.0/com/android/build/api/transform/Transform) to automatically instrument apps at the event handlers to uniquely log executed UI events. Specifically, ASM is an all purpose Java bytecode manipulation and analysis framework, which can modify existing classes or dynamically generate classes in the binary form.
 
-In our work, InstrumentDriod is used to instrument the apps from [Themis](https://github.com/the-themis-benchmarks), a representative benchmark with diverse types of real-world bugs for Android. We have settled six instrumented apks in the directory [Instrumented-application-apk](https://github.com/InstrumentDroid/InstrumentDroid/tree/main/Instrumented-application-apk "Instrumented-application-apk").
+In our work, InstrumentDriod is used to instrument the apps from [Themis](https://github.com/the-themis-benchmarks), a representative benchmark with diverse types of real-world bugs for Android. We have settled six instrumented apks in the directory [Instrumented-application-apks](https://github.com/InstrumentDroid/InstrumentDroid/tree/main/Instrumented-application-apks "Instrumented-application-apks").
 
 Fig. 1 shows InstrumentDriod's workflow.
 
