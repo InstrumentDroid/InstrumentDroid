@@ -10,7 +10,7 @@ In our work, DDroid-instrumentor is used to instrument the apps from [Themis](ht
 
 Fig. 1 shows DDroid-instrumentor's workflow.
 
-![Fig 1](https://636c-cloud1-9g4n7hq235ad7300-1312749401.tcb.qcloud.la/Workflow%20of%20our%20instrumentation.png?sign=e12f7548b29a781b53ecb3ea5cd9d0fe&t=1693055132)
+![Fig 1](https://github.com/InstrumentDroid/InstrumentDroid/blob/main/figure/Workflow%20of%20our%20instrumentation.png)
 
 ### Step (1): Instrumentation
 
